@@ -197,7 +197,7 @@ export default class Keyboard extends PureComponent {
 						value={<LanguageIcon />}
 						onClick={this.handleLanguageClick}
 					/>
-					{inputNode.dataset.type === 'email' ?
+					{true ?
 						<KeyboardButton
 							value={'@'}
 							onClick={this.handleLetterButtonClick}
@@ -208,7 +208,7 @@ export default class Keyboard extends PureComponent {
 						classes="keyboard-space"
 						onClick={this.handleLetterButtonClick}
 					/>
-					{inputNode.dataset.type === 'email' ?
+					{true ?
 						<KeyboardButton
 							value={'.'}
 							onClick={this.handleLetterButtonClick}
