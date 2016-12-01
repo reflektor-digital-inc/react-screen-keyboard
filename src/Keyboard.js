@@ -111,9 +111,11 @@ export default class Keyboard extends PureComponent {
 			keysSet = CyrillicLayout;
 		}
 
-		return this.state.uppercase ?
-			keysSet.map(keyRow => keyRow.map(key => key.toUpperCase()))
-			: keysSet;
+		return keysSet;
+
+		// return this.state.uppercase ?
+		// 	keysSet.map(keyRow => keyRow.map(key => key.toUpperCase()))
+		// 	: keysSet;
 	}
 
 	getSymbolsKeyValue() {
