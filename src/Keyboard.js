@@ -54,6 +54,8 @@ export default class Keyboard extends PureComponent {
 	}
 
 	handleLetterButtonClick(key) {
+		console.log(this.props);
+
 		const {inputNode} = this.props;
 		const {value, selectionStart, selectionEnd} = inputNode;
 		const nextValue = value.substring(0, selectionStart) + key + value.substring(selectionEnd);
