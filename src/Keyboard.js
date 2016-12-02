@@ -232,13 +232,32 @@ export default class Keyboard extends PureComponent {
 						classes="keyboard-space"
 						onClick={this.handleLetterButtonClick}
 					/>
-					{true ?
+
+						<KeyboardButton
+							value={'-'}
+							onClick={this.handleLetterButtonClick}
+						/>
+
+						<KeyboardButton
+							value={'_'}
+							onClick={this.handleLetterButtonClick}
+						/>
+
+
 						<KeyboardButton
 							value={'.'}
 							onClick={this.handleLetterButtonClick}
 						/>
-					: null}
-					{rightButtons}
+
+
+						<KeyboardButton
+							value={`'`}
+							onClick={this.handleLetterButtonClick}
+						/>
+
+					{
+						// rightButtons
+					}
 				</div>
 			</div>
 		);
