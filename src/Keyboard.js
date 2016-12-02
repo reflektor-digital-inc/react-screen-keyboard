@@ -33,7 +33,6 @@ export default class Keyboard extends PureComponent {
 		this.handleLanguageClick = this.handleLanguageClick.bind(this);
 		this.handleShiftClick = this.handleShiftClick.bind(this);
 		this.handleSymbolsClick = this.handleSymbolsClick.bind(this);
-		this.handleTab = this.handleTab.bind(this);
 
 		this.state = {
 			currentLanguage: props.defaultLanguage,
