@@ -165,6 +165,10 @@ export default class Keyboard extends PureComponent {
 							key={button}
 						/>
 					)}
+					<KeyboardButton
+							value={'&tab;'}
+							onClick={this.handleLetterButtonClick}
+						/>
 				</div>
 
 				<div className="keyboard-row">
