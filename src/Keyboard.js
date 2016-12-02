@@ -58,7 +58,13 @@ export default class Keyboard extends PureComponent {
 
 		const {inputNode} = this.props;
 		const {value, selectionStart, selectionEnd} = inputNode;
-		const nextValue = value.substring(0, selectionStart) + key + value.substring(selectionEnd);
+		var nextValue = ""
+
+		if (key == 'tab') {
+			nextValue = value.substring(0, selectionStart) + '&tab;' + value.substring(selectionEnd);
+		} else {
+			nextValue = value.substring(0, selectionStart) + key + value.substring(selectionEnd);
+		}
 
 		console.log("inputNode ", inputNode);
 		inputNode.value = nextValue;
