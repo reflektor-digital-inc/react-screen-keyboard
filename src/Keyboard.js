@@ -195,15 +195,34 @@ export default class Keyboard extends PureComponent {
 							key={button}
 						/>
 					)}
-					<KeyboardButton
+						<KeyboardButton
+							value={'-'}
+							onClick={this.handleLetterButtonClick}
+						/>
+
+						<KeyboardButton
+							value={'_'}
+							onClick={this.handleLetterButtonClick}
+						/>
+
+
+						<KeyboardButton
 							value={'.'}
 							onClick={this.handleLetterButtonClick}
 						/>
-					<KeyboardButton
-						value={symbolsKeyValue}
-						onClick={this.handleSymbolsClick}
-					/>
-				</div>
+
+
+						<KeyboardButton
+							value={`'`}
+							onClick={this.handleLetterButtonClick}
+						/>
+						{
+				// 	<KeyboardButton
+				// 		value={symbolsKeyValue}
+				// 		onClick={this.handleSymbolsClick}
+				// 	/>
+				// </div>
+			}
 
 				<div className="keyboard-row">
 					{
@@ -233,27 +252,7 @@ export default class Keyboard extends PureComponent {
 						onClick={this.handleLetterButtonClick}
 					/>
 
-						<KeyboardButton
-							value={'-'}
-							onClick={this.handleLetterButtonClick}
-						/>
 
-						<KeyboardButton
-							value={'_'}
-							onClick={this.handleLetterButtonClick}
-						/>
-
-
-						<KeyboardButton
-							value={'.'}
-							onClick={this.handleLetterButtonClick}
-						/>
-
-
-						<KeyboardButton
-							value={`'`}
-							onClick={this.handleLetterButtonClick}
-						/>
 
 					{
 						// rightButtons
