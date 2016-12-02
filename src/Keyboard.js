@@ -166,7 +166,7 @@ export default class Keyboard extends PureComponent {
 						/>
 					)}
 					<KeyboardButton
-							value={'x'}
+							value={'tab'}
 							onClick={this.handleLetterButtonClick}
 						/>
 				</div>
