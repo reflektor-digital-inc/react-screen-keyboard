@@ -180,6 +180,10 @@ export default class Keyboard extends PureComponent {
 							value={'@'}
 							onClick={this.handleLetterButtonClick}
 						/>
+						<KeyboardButton
+							value={'é'}
+							onClick={this.handleLetterButtonClick}
+						/>
 					<div className="keyboard-halfButton"></div>
 				</div>
 
@@ -191,6 +195,10 @@ export default class Keyboard extends PureComponent {
 							key={button}
 						/>
 					)}
+					<KeyboardButton
+							value={'.'}
+							onClick={this.handleLetterButtonClick}
+						/>
 					<KeyboardButton
 						value={symbolsKeyValue}
 						onClick={this.handleSymbolsClick}
