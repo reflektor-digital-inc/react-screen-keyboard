@@ -154,6 +154,7 @@ export default class Keyboard extends PureComponent {
 					)}
 					<KeyboardButton
 						value={<BackspaceIcon />}
+						classes="keyboard-backspace"
 						onClick={this.handleBackspaceClick}
 					/>
 				</div>
@@ -236,6 +237,7 @@ export default class Keyboard extends PureComponent {
 					}
 					<KeyboardButton
 						value={<ShiftIcon />}
+						classes="keyboard-shift"
 						onClick={this.handleShiftClick}
 					/>
 					{
