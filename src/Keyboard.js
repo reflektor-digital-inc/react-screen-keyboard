@@ -75,7 +75,8 @@ export default class Keyboard extends PureComponent {
 
 	isUppercase() {
 		const {inputNode, isFirstLetterUppercase} = this.props;
-		return !inputNode.value.length && isFirstLetterUppercase;
+		return false;
+		// return !inputNode.value.length && isFirstLetterUppercase;
 	}
 
 	handleBackspaceClick() {
