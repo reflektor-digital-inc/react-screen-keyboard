@@ -221,8 +221,9 @@ export default class Keyboard extends PureComponent {
 				// 		value={symbolsKeyValue}
 				// 		onClick={this.handleSymbolsClick}
 				// 	/>
-				// </div>
-			}
+						}
+				</div>
+			
 
 				<div className="keyboard-row">
 					{
