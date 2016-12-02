@@ -180,10 +180,6 @@ export default class Keyboard extends PureComponent {
 				</div>
 
 				<div className="keyboard-row">
-					<KeyboardButton
-						value={<ShiftIcon />}
-						onClick={this.handleShiftClick}
-					/>
 					{keys[2].map((button) =>
 						<KeyboardButton
 							value={button}
@@ -200,9 +196,15 @@ export default class Keyboard extends PureComponent {
 				<div className="keyboard-row">
 					{leftButtons}
 					<KeyboardButton
-						value={<LanguageIcon />}
-						onClick={this.handleLanguageClick}
+						value={<ShiftIcon />}
+						onClick={this.handleShiftClick}
 					/>
+					{
+					// <KeyboardButton
+					// 	value={<LanguageIcon />}
+					// 	onClick={this.handleLanguageClick}
+					// />
+					}
 					{true ?
 						<KeyboardButton
 							value={'@'}
