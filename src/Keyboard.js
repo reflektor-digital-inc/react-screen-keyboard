@@ -176,6 +176,10 @@ export default class Keyboard extends PureComponent {
 							key={button}
 						/>
 					)}
+					<KeyboardButton
+							value={'@'}
+							onClick={this.handleLetterButtonClick}
+						/>
 					<div className="keyboard-halfButton"></div>
 				</div>
 
@@ -207,12 +211,14 @@ export default class Keyboard extends PureComponent {
 					// 	onClick={this.handleLanguageClick}
 					// />
 					}
-					{true ?
-						<KeyboardButton
-							value={'@'}
-							onClick={this.handleLetterButtonClick}
-						/>
-					: null}
+					{
+					// 	true ?
+					// 	<KeyboardButton
+					// 		value={'@'}
+					// 		onClick={this.handleLetterButtonClick}
+					// 	/>
+					// : null
+				}
 					<KeyboardButton
 						value={' '}
 						classes="keyboard-space"
