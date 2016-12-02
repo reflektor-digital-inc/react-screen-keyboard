@@ -154,7 +154,7 @@ export default class Keyboard extends PureComponent {
 					)}
 					<KeyboardButton
 						value='Del'
-						classes="keyboard-backspace"
+						classes="keyboard-backspace keyboard-last-in-row"
 						onClick={this.handleBackspaceClick}
 					/>
 				</div>
@@ -169,6 +169,7 @@ export default class Keyboard extends PureComponent {
 					)}
 					<KeyboardButton
 							value={'tab'}
+							classes="keyboard-last-in-row"
 							onClick={this.handleLetterButtonClick}
 						/>
 				</div>
@@ -188,6 +189,7 @@ export default class Keyboard extends PureComponent {
 						/>
 						<KeyboardButton
 							value={'é'}
+							classes="keyboard-last-in-row"
 							onClick={this.handleLetterButtonClick}
 						/>
 					<div className="keyboard-halfButton"></div>
@@ -220,6 +222,7 @@ export default class Keyboard extends PureComponent {
 
 						<KeyboardButton
 							value={`'`}
+							classes="keyboard-last-in-row"
 							onClick={this.handleLetterButtonClick}
 						/>
 						{
