@@ -194,7 +194,9 @@ export default class Keyboard extends PureComponent {
 				</div>
 
 				<div className="keyboard-row">
-					{leftButtons}
+					{
+						// leftButtons
+					}
 					<KeyboardButton
 						value={<ShiftIcon />}
 						onClick={this.handleShiftClick}
