@@ -153,7 +153,7 @@ export default class Keyboard extends PureComponent {
 						/>
 					)}
 					<KeyboardButton
-						value={<BackspaceIcon />}
+						value='Del'
 						classes="keyboard-backspace"
 						onClick={this.handleBackspaceClick}
 					/>
@@ -236,7 +236,7 @@ export default class Keyboard extends PureComponent {
 						// leftButtons
 					}
 					<KeyboardButton
-						value={<ShiftIcon />}
+						value={'Shift'}
 						classes="keyboard-shift"
 						onClick={this.handleShiftClick}
 					/>
@@ -255,7 +255,7 @@ export default class Keyboard extends PureComponent {
 					// : null
 				}
 					<KeyboardButton
-						value={' '}
+						value={'Space'}
 						classes="keyboard-space"
 						onClick={this.handleLetterButtonClick}
 					/>
