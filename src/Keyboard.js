@@ -118,9 +118,9 @@ export default class Keyboard extends PureComponent {
 
 		return keysSet;
 
-		// return this.state.uppercase ?
-		// 	keysSet.map(keyRow => keyRow.map(key => key.toUpperCase()))
-		// 	: keysSet;
+		return this.state.uppercase ?
+			keysSet.map(keyRow => keyRow.map(key => key.toUpperCase()))
+			: keysSet;
 	}
 
 	getSymbolsKeyValue() {
