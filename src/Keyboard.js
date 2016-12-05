@@ -46,6 +46,7 @@ export default class Keyboard extends PureComponent {
 	}
 
 	handleShiftClick() {
+		console.log("shift!");
 		this.setState({uppercase: !this.state.uppercase});
 	}
 
