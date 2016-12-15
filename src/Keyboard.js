@@ -46,7 +46,7 @@ export default class Keyboard extends PureComponent {
 	}
 
 	handleShiftClick() {
-		console.log("shift!");
+		// console.log("shift!");
 		this.setState({uppercase: !this.state.uppercase});
 	}
 
@@ -55,7 +55,7 @@ export default class Keyboard extends PureComponent {
 	}
 
 	handleLetterButtonClick(key) {
-		console.log("Keyy: ", key);
+		// console.log("Keyy: ", key);
 
 		const {inputNode} = this.props;
 		const {value, selectionStart, selectionEnd} = inputNode;
@@ -67,7 +67,7 @@ export default class Keyboard extends PureComponent {
 			return false;
 		}
 
-		console.log("inputNode ", inputNode);
+		// console.log("inputNode ", inputNode);
 
 		this.props.setProp(inputNode.name, nextValue);
 		inputNode.value = nextValue;
