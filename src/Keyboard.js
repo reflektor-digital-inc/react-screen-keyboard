@@ -184,7 +184,7 @@ export default class Keyboard extends PureComponent {
 					<KeyboardButton
 							value={'tab'}
 							classes="keyboard-last-in-row"
-							onClick={this.handleLetterButtonClickHandler(' ')}
+							onClick={()=>this.handleLetterButtonClickHandler(' ')}
 						/>
 				</div>
 
