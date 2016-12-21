@@ -54,6 +54,10 @@ export default class Keyboard extends PureComponent {
 		this.setState({showSymbols: !this.state.showSymbols});
 	}
 
+	handleLetterButtonClickHandler(key) {
+		this.handleLetterButtonClick(key);
+	}
+
 	handleLetterButtonClick(key) {
 		// console.log("Keyy: ", key);
 
@@ -178,9 +182,9 @@ export default class Keyboard extends PureComponent {
 						/>
 					)}
 					<KeyboardButton
-							value={' '}
+							value={'tab'}
 							classes="keyboard-last-in-row"
-							onClick={this.handleLetterButtonClick}
+							onClick={this.handleLetterButtonClickHandler(' ')}
 						/>
 				</div>
 
