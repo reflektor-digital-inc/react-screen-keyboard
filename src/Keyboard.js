@@ -102,6 +102,8 @@ export default class Keyboard extends PureComponent {
 		}
 		nextSelectionPosition = (nextSelectionPosition > 0) ? nextSelectionPosition : 0;
 
+		
+		this.props.setProp(inputNode.name, nextValue);
 		inputNode.value = nextValue;
 		if (this.props.onClick) {
 			this.props.onClick(nextValue);
@@ -176,7 +178,7 @@ export default class Keyboard extends PureComponent {
 						/>
 					)}
 					<KeyboardButton
-							value={'tab'}
+							value={' '}
 							classes="keyboard-last-in-row"
 							onClick={this.handleLetterButtonClick}
 						/>
