@@ -37,7 +37,7 @@ export default class Keyboard extends PureComponent {
 		this.state = {
 			currentLanguage: props.defaultLanguage,
 			showSymbols: false,
-			uppercase: this.isUppercase(),
+			uppercase: false
 		};
 	}
 
@@ -63,14 +63,18 @@ export default class Keyboard extends PureComponent {
 
 		if (key == 'Space') key = ' ';
 
-		const {inputNode} = this.props;
+		const {inputNode, isFirstLetterUppercase} = this.props;
 		const {value, selectionStart, selectionEnd} = inputNode;
 		
-		if (typeof value !== "undefined") {
+		if (this.state.uppercase){
+			key = key.toUpperCase();
+		}
+
+		if (typeof value !== "undefined" && value.length > 0) {
 			var nextValue = value.substring(0, selectionStart) + key + value.substring(selectionEnd);
 		}
 		else {
-			return false;
+			var nextValue = (isFirstLetterUppercase) ? key.toUpperCase() : key;
 		}
 
 		// console.log("inputNode ", inputNode);
@@ -84,14 +88,7 @@ export default class Keyboard extends PureComponent {
 			inputNode.focus();
 			inputNode.setSelectionRange(selectionStart + 1, selectionStart + 1);
 		}, 0);
-		this.setState({uppercase: this.isUppercase()});
 		inputNode.dispatchEvent(new Event('input'));
-	}
-
-	isUppercase() {
-		const {inputNode, isFirstLetterUppercase} = this.props;
-		//return false;
-		return !!((inputNode.value && !inputNode.value.length) && isFirstLetterUppercase);
 	}
 
 	handleBackspaceClick() {
@@ -118,7 +115,6 @@ export default class Keyboard extends PureComponent {
 			inputNode.focus();
 			inputNode.setSelectionRange(nextSelectionPosition, nextSelectionPosition);
 		}, 0);
-		this.setState({uppercase: this.isUppercase()});
 		inputNode.dispatchEvent(new Event('change'));
 	}
 
