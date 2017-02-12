@@ -22,7 +22,7 @@ export default class Keyboard extends PureComponent {
 	static defaultProps = {
 		leftButtons: [],
 		rightButtons: [],
-		isFirstLetterUppercase: false,
+		isFirstLetterUppercase: true,
 		defaultLanguage: 'cyrrilic',
 	};
 
