@@ -89,6 +89,10 @@ export default class Keyboard extends PureComponent {
 			inputNode.setSelectionRange(selectionStart + 1, selectionStart + 1);
 		}, 0);
 		inputNode.dispatchEvent(new Event('input', { bubbles: true }));
+
+		// Reset uppercase
+		this.setState({uppercase:false});
+
 	}
 
 	handleBackspaceClick() {
