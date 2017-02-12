@@ -88,7 +88,7 @@ export default class Keyboard extends PureComponent {
 			inputNode.focus();
 			inputNode.setSelectionRange(selectionStart + 1, selectionStart + 1);
 		}, 0);
-		inputNode.dispatchEvent(new Event('input'));
+		inputNode.dispatchEvent(new Event('input', { bubbles: true }));
 	}
 
 	handleBackspaceClick() {
@@ -115,7 +115,7 @@ export default class Keyboard extends PureComponent {
 			inputNode.focus();
 			inputNode.setSelectionRange(nextSelectionPosition, nextSelectionPosition);
 		}, 0);
-		inputNode.dispatchEvent(new Event('change'));
+		inputNode.dispatchEvent(new Event('input', { bubbles: true }));
 	}
 
 	getKeys() {
