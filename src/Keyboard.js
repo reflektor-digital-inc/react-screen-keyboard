@@ -61,6 +61,8 @@ export default class Keyboard extends PureComponent {
 	handleLetterButtonClick(key) {
 		// console.log("Keyy: ", key);
 
+		if (key == 'Space') key = ' ';
+
 		const {inputNode} = this.props;
 		const {value, selectionStart, selectionEnd} = inputNode;
 		
