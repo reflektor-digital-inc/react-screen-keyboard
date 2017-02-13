@@ -74,7 +74,7 @@ export default class Keyboard extends PureComponent {
 			var nextValue = value.substring(0, selectionStart) + key + value.substring(selectionEnd);
 		}
 		else {
-			var nextValue = (isFirstLetterUppercase) ? key.toUpperCase() : key;
+			var nextValue = (isFirstLetterUppercase) ? key.toString().toUpperCase() : key;
 		}
 
 		// console.log("inputNode ", inputNode);
@@ -135,7 +135,7 @@ export default class Keyboard extends PureComponent {
 		return keysSet;
 
 		return this.state.uppercase ?
-			keysSet.map(keyRow => keyRow.map(key => key.toUpperCase()))
+			keysSet.map(keyRow => keyRow.map(key => key.toString().toUpperCase()))
 			: keysSet;
 	}
 
