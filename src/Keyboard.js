@@ -67,7 +67,7 @@ export default class Keyboard extends PureComponent {
 		const {value, selectionStart, selectionEnd} = inputNode;
 		
 		if (this.state.uppercase){
-			key = key.toUpperCase();
+			key = key.toString().toUpperCase();
 		}
 
 		if (typeof value !== "undefined" && value.length > 0) {
