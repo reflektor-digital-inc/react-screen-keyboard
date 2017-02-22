@@ -125,15 +125,6 @@ export default class Keyboard extends PureComponent {
 			inputNode.setSelectionRange(nextSelectionPosition, nextSelectionPosition);
 		}, 0);
 		inputNode.dispatchEvent(new Event('input', { bubbles: true }));
-
-
-		console.log("Value!!", value);
-		// Reset uppercase
-		if (value.length == 0) {
-			this.setState({uppercase:true});
-		} else {
-			this.setState({uppercase:false});
-		}
 	}
 
 	getKeys() {
@@ -149,8 +140,9 @@ export default class Keyboard extends PureComponent {
 		// console.log("Keysset1", keysSet);
 		// return keysSet;
 
-		console.log("Keyboard >>>>>>>", this);
-		return this.state.uppercase ?
+		console.log("Keyboard >>>>>>>", this.props.inputNode.value, this.props.inputNode.value.length);
+		
+		return this.state.uppercase || this.props.inputNode.value.length == 0 ?
 			keysSet.map(keyRow => keyRow.map(key => key.toString().toUpperCase()))
 			: keysSet;
 	}
