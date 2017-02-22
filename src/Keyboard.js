@@ -94,6 +94,8 @@ export default class Keyboard extends PureComponent {
 		}, 0);
 		inputNode.dispatchEvent(new Event('input', { bubbles: true }));
 
+		// Reset uppercase
+		// this.setState({uppercase:false});
 
 	}
 
@@ -108,6 +110,8 @@ export default class Keyboard extends PureComponent {
 		} else {
 			nextValue = value.substring(0, selectionStart) + value.substring(selectionEnd);
 			nextSelectionPosition = selectionStart;
+			// Reset uppercase
+			this.setState({uppercase:true});
 		}
 		nextSelectionPosition = (nextSelectionPosition > 0) ? nextSelectionPosition : 0;
 
