@@ -133,10 +133,12 @@ export default class Keyboard extends PureComponent {
 		}
 
 		return keysSet;
+		console.log("Keysset1", keysSet);
 
 		return this.state.uppercase ?
 			keysSet.map(keyRow => keyRow.map(key => key.toString().toUpperCase()))
 			: keysSet;
+		console.log("Keysset2", keysSet);
 	}
 
 	getSymbolsKeyValue() {
