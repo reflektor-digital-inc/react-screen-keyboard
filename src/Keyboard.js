@@ -72,9 +72,13 @@ export default class Keyboard extends PureComponent {
 
 		if (typeof value !== "undefined" && value.length > 0) {
 			var nextValue = value.substring(0, selectionStart) + key + value.substring(selectionEnd);
+			// Reset uppercase
+			this.setState({uppercase:false});
 		}
 		else {
 			var nextValue = (isFirstLetterUppercase) ? key.toString().toUpperCase() : key;
+			// Reset uppercase
+			this.setState({uppercase:true});
 		}
 
 		// console.log("inputNode ", inputNode);
@@ -90,8 +94,6 @@ export default class Keyboard extends PureComponent {
 		}, 0);
 		inputNode.dispatchEvent(new Event('input', { bubbles: true }));
 
-		// Reset uppercase
-		this.setState({uppercase:false});
 
 	}
 
