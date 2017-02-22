@@ -90,8 +90,13 @@ export default class Keyboard extends PureComponent {
 		}, 0);
 		inputNode.dispatchEvent(new Event('input', { bubbles: true }));
 
+		console.log("Value!!!!", value);
 		// Reset uppercase
-		this.setState({uppercase:false});
+		if (value.length == 0) {
+			this.setState({uppercase:true});
+		} else {
+			this.setState({uppercase:false});
+		}
 
 	}
 
