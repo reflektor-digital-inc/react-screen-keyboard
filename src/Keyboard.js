@@ -137,11 +137,7 @@ export default class Keyboard extends PureComponent {
 			keysSet = CyrillicLayout;
 		}
 
-		// console.log("Keysset1", keysSet);
-		// return keysSet;
-
-		console.log("Keyboard >>>>>>>3", this.props, this.props.inputNode.value.length);
-
+		// uppercase handling
 		var itsUppercase = false;
 		if (typeof this.props.inputNode.value) {
 			itsUppercase = this.props.inputNode.value.length == 0;
