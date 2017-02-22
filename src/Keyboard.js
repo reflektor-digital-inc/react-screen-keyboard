@@ -139,7 +139,7 @@ export default class Keyboard extends PureComponent {
 
 		// uppercase handling
 		var itsUppercase = false;
-		if (typeof this.props.inputNode.value) {
+		if (typeof this.props.inputNode.value !== "undefined") {
 			itsUppercase = this.props.inputNode.value.length == 0;
 		}
 
