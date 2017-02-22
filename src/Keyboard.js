@@ -140,11 +140,14 @@ export default class Keyboard extends PureComponent {
 		// console.log("Keysset1", keysSet);
 		// return keysSet;
 
-		console.log("Keyboard >>>>>>>1", this.props, this.props.inputNode)
-		console.log("Keyboard >>>>>>>2", this.props, this.props.inputNode.value);
 		console.log("Keyboard >>>>>>>3", this.props, this.props.inputNode.value.length);
 
-		return this.state.uppercase ?
+		var itsUppercase = false;
+		if (typeof this.props.inputNode.value) {
+			itsUppercase = this.props.inputNode.value.length == 0;
+		}
+
+		return this.state.uppercase || itsUppercase ?
 			keysSet.map(keyRow => keyRow.map(key => key.toString().toUpperCase()))
 			: keysSet;
 	}
