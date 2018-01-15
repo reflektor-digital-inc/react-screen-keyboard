@@ -32,7 +32,7 @@ export default class KeyboardButton extends PureComponent {
 		}
 
 		return (
-			<button className={'keyboard-button' + ' ' + this.props.classes} onClick={this.handleClick}>
+			<button className={'keyboard-button' + ' ' + this.props.classes} data-en={this.props.en} data-fr={this.props.fr} onClick={this.handleClick}>
 				{this.props.value}
 			</button>
 		);
