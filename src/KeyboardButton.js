@@ -25,7 +25,7 @@ export default class KeyboardButton extends PureComponent {
 	render() {
 		if (this.props.value == "tab") {
 			return (
-				<button className={'keyboard-button' + ' ' + this.props.classes}, 'data-en':this.props.en, 'data-fr':this.props.fr, onClick={()=>this.handleTab()}>
+				<button className={'keyboard-button' + ' ' + this.props.classes} data-en={this.props.en} data-fr={this.props.fr} onClick={()=>this.handleTab()}>
 					Tab
 				</button>
 			);
