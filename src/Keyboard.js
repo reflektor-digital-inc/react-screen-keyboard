@@ -179,6 +179,8 @@ export default class Keyboard extends PureComponent {
 					)}
 					<KeyboardButton
 						value='Del'
+						data-en="Del"
+						data-fr="Suppr."
 						classes="keyboard-backspace keyboard-last-in-row"
 						onClick={this.handleBackspaceClick}
 					/>
@@ -265,6 +267,8 @@ export default class Keyboard extends PureComponent {
 					}
 					<KeyboardButton
 						value={'Shift'}
+						data-en="Shift"
+						data-fr="Maj."
 						classes="keyboard-shift"
 						onClick={this.handleShiftClick}
 					/>
@@ -284,6 +288,8 @@ export default class Keyboard extends PureComponent {
 				}
 					<KeyboardButton
 						value={'Space'}
+						data-en="Space"
+						data-fr="Espace"
 						classes="keyboard-space"
 						onClick={this.handleLetterButtonClick}
 					/>
